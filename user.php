@@ -13,14 +13,13 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
             public $surname;
             public $age;
             public $creditCard=[];
-            public $fiscalCode;
             public $email;
+            
     
-            public function __construct($name, $surname, $age, $creditCard, $fiscalCode, $email){
+             function __construct($name, $surname, $age, $creditCard, $email){
                 $this->name = $name;
                 $this->surname = $surname ;
-                $this->creditCard = $creditCard;
-                $this->fiscalCode = $fiscalCode;
+                $this->creditCard []= $creditCard;
                 $this->email = $email;
                 $this->age = $age;
                 
@@ -28,30 +27,29 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
             }
                    
         }
-        class Discount extends User {
+        class Discount extends User{
             private $password;
-            protected $sales;
-
-            public function __construct($name, $surname, $email, $fiscalCode, $creditCard, $password){
-                $name = $this->name;
-                $surname = $this->surname;
-                $creditCard[] = $this->creditCard;
-                $fiscalCode = $this->fiscalCode;
-                $password = $this->password;
-                
-            }
             
-            public function getSales(){
-                if($this->password){
-                    $this->sales = 20;
-                    echo( $this->sales);
-                }else{
-                    echo('Registrati ed ottieni il tuo sconto!:)');
-                }
+            protected $sales;
+          
+            function __construct($name, $surname, $age, $creditCard,$password,  $email){
+                $this->name = $name;
+                $this->surname = $surname ;
+                $this->creditCard []= $creditCard;
+                $this->email = $email;
+                $this->age = $age;
+              $this->password = $password;
+              
             }
-
-
-        }
+          
+            public function getSales(){
+              if($this->password){
+                $this->sales = 20;
+              } else {
+                echo 'Registrati per ottenere il tuo sconto!:)';
+              }
+            }
+          } 
     
 
   

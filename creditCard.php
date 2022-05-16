@@ -22,7 +22,7 @@
             return $this->number;
         }
         public function setNumber(){
-            if(strlen($number)== 16){
+            if(is_numeric($number)== 16){
                 $this->number = $number;
             }else{
                 echo('Numero Carta errato');
