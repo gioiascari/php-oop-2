@@ -6,7 +6,7 @@ Dividete bene in classi e implementate gli attributi e i metodi necessari per il
 BONUS:
 Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibili solo in un periodo particolare (es. da maggio ad agosto). -->
 <?php
-
+ include_once __DIR__  . '/creditCard.php';
 
         class User {
             public $name;
@@ -15,20 +15,40 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
             public $creditCard=[];
             public $fiscalCode;
             public $email;
+    
+            public function __construct($name, $surname, $email, $fiscalCode, $creditCard){
+                $name = $this->name;
+                $surname = $this->surname;
+                $creditCard[] = $this->creditCard;
+                $fiscalCode = $this->fiscalCode;
+                
+                
+            }
+                   
+        }
+        class Discount extends User {
             private $password;
-            public $sales;
-        
-          
+            protected $sales;
 
-
-            public function __construc($name, $surname, $email, $fiscalCode, $creditCard, $password){
+            public function __construct($name, $surname, $email, $fiscalCode, $creditCard, $password){
                 $name = $this->name;
                 $surname = $this->surname;
                 $creditCard[] = $this->creditCard;
                 $fiscalCode = $this->fiscalCode;
                 $password = $this->password;
+                
             }
-                   
+            
+            public function getSales(){
+                if($this->password){
+                    $this->sales = 20;
+                    echo( $this->sales);
+                }else{
+                    echo('Registrati ed ottieni il tuo sconto!:)');
+                }
+            }
+
+
         }
     
 
