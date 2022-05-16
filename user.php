@@ -16,11 +16,13 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
             public $fiscalCode;
             public $email;
     
-            public function __construct($name, $surname, $email, $fiscalCode, $creditCard){
-                $name = $this->name;
-                $surname = $this->surname;
-                $creditCard[] = $this->creditCard;
-                $fiscalCode = $this->fiscalCode;
+            public function __construct($name, $surname, $age, $creditCard, $fiscalCode, $email){
+                $this->name = $name;
+                $this->surname = $surname ;
+                $this->creditCard = $creditCard;
+                $this->fiscalCode = $fiscalCode;
+                $this->email = $email;
+                $this->age = $age;
                 
                 
             }

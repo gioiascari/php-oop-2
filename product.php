@@ -7,13 +7,17 @@
         public $category;
 
         public function __construct($brand, $price, $name, $category){
-            $brand = $this->brand;
-            $price = $this->price;
-            $name = $this->name;
-            $category = $this->category;
+            $this->brand = $brand ; 
+            $this->price = $price;
+            $this->name = $name;
+            $this->category = $category;
+            //se inserisco il dato in questa maniera qua sotto, in 'new product' mi darà risultato 'null'
+            // $category = $this->category;
         }
         
     }
 
 
 ?>
+
+

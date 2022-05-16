@@ -1,14 +1,14 @@
 <?php
 //Credit Card
     class CreditCard {
-        private $expiration;
         private $number;
+        private $expiration;
         private $cvv;
 
-        public function __construct($expiration, $number, $cvv){
-            $expiration = $this->expiration;
-            $number = $this-> number;
-            $cvv = $this-> cvv;
+        public function __construct($number,$expiration, $cvv){
+            $this-> number = $number;
+            $this-> expiration = $expiration;
+            $this-> cvv = $cvv;
         }
 
         public function getExpiration(){
@@ -17,13 +17,13 @@
         public function setExpiration(){
             return $this->expiration;
         }
-        
+
         public function getNumber(){
             return $this->number;
         }
         public function setNumber(){
             if(strlen($number)== 16){
-                $number = $this->number;
+                $this->number = $number;
             }else{
                 echo('Numero Carta errato');
             }
@@ -35,7 +35,7 @@
         }
         public function setCvv($cvv){
             if(strlen($cvv)== 3){
-                $cvv = $this->cvv;
+                $this->cvv = $cvv;
             }else{
                 echo('Numero cvv errato');
             }
