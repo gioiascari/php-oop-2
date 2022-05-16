@@ -4,6 +4,7 @@ include_once __DIR__ . '/creditCard.php';
 include_once __DIR__ . '/product.php';
 
 
+
 //Product
 $dogBed = new Product ('DogBed4less', 40, 'Dog Bed', 'dog' );
 $dogFood = new Product('VitaVeg', 15, 'Dog Croquettes', 'dog');
@@ -27,8 +28,11 @@ $user2 = new user ('Davide', 'Fitzgerald',  24, $card3, $dogBed, 'fitzgerald_dav
 $user3 = new user ('Virginia', 'Lloyd',  19, $card2, '', 'lloyd_virg@gmail.com' );
 
 
-$user1->getSales();
+$user1->getSales(20);
+echo "<pre>";
 var_dump($user1, $user2);
+echo "</pre>";
+
 
 ?>
 
