@@ -6,9 +6,9 @@
         private $cvv;
 
         public function __construct($number,$expiration, $cvv){
-            $this-> number = $number;
-            $this-> expiration = $expiration;
-            $this-> cvv = $cvv;
+            $this-> setNumber($number);
+            $this-> setExpiration($expiration);
+            $this-> setCvv($cvv);
         }
 
         public function getExpiration(){

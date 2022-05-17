@@ -31,7 +31,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
         }
         class Discount extends User{
             private $password;
-            
+            private $isLogged = false;
             protected $sales;
           
             function __construct($name, $surname, $age, $creditCard,$password,  $email){
@@ -46,6 +46,10 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
               } else {
                 echo 'Registrati per ottenere il tuo sconto!:)';
               }
+            }
+
+            public function userLogged(){
+              return $isLogged;
             }
           } 
     
