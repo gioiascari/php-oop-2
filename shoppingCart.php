@@ -5,13 +5,14 @@ include_once __DIR__ . '/index.php';
         public $products;
         public $totProducts;
         public $totEuro;
-
-        public function addToCart(){
-            $this->products = $products;
+        //Aggiunge al carrello
+        public function addToCart($products){
+            $this->products[] = $products;
         }
         public function totCount(){
             return $this->totProducts = count($this->products);
         }
+        //Pagamento totale
         function totPayment(){
             foreach($this->products as $key){
                 $this->totEuro += $key->price;

@@ -14,24 +14,17 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
             public $age;
             public $creditCard=[];
             public $email;
-            
-    
              function __construct($name, $surname, $age, $creditCard, $email){
                 $this->name = $name;
                 $this->surname = $surname ;
                 $this->creditCard []= $creditCard;
                 $this->email = $email;
                 $this->age = $age;
-             
-
-                
-                
             }
                    
         }
         class Discount extends User{
             private $password;
-            private $isLogged = false;
             protected $sales;
           
             function __construct($name, $surname, $age, $creditCard,$password,  $email){
@@ -48,13 +41,5 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
               }
             }
 
-            public function userLogged(){
-              return $isLogged;
-            }
-          } 
-    
-
-  
-        
-
+            } 
 ?>

@@ -14,14 +14,14 @@
         public function getExpiration(){
             return $this->expiration;
         }
-        public function setExpiration(){
+        public function setExpiration($expiration){
             return $this->expiration;
         }
 
         public function getNumber(){
             return $this->number;
         }
-        public function setNumber(){
+        public function setNumber($number){
             if(is_numeric($number)== 16){
                 $this->number = $number;
             }else{
@@ -41,14 +41,11 @@
             }
           
         }
+        function dataExp($number,$expiration,$cvv){
+            $this->cvv = $cvv;
+            $this->number = $number;
+
+        }
      
-
     }
-
-
-
-
-
-
-
 ?>
