@@ -24,13 +24,13 @@ $card2->setExpiration('06-01');
 //User
 $user1 = new Discount ('Gioia', 'Gonzales',  25, $card1, $dogBed, 'gonzales.gioia@libero.it');
 
-$user2 = new user ('Davide', 'Fitzgerald',  24, $card3, $dogBed, 'fitzgerald_davide321@yahoo.it');
-$user3 = new user ('Virginia', 'Lloyd',  19, $card2, '', 'lloyd_virg@gmail.com' );
+$user2 = new User ('Davide', 'Fitzgerald',  24, $card3, $dogBed, 'fitzgerald_davide321@yahoo.it');
+$user3 = new User ('Virginia', 'Lloyd',  19, $card2, '', 'lloyd_virg@gmail.com' );
 
 
 $user1->getSales(20);
 echo "<pre>";
-var_dump($user1, $user2);
+var_dump($user1,$user2);
 echo "</pre>";
 
 

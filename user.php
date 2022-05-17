@@ -22,6 +22,8 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
                 $this->creditCard []= $creditCard;
                 $this->email = $email;
                 $this->age = $age;
+             
+
                 
                 
             }
@@ -33,11 +35,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
             protected $sales;
           
             function __construct($name, $surname, $age, $creditCard,$password,  $email){
-                $this->name = $name;
-                $this->surname = $surname ;
-                $this->creditCard []= $creditCard;
-                $this->email = $email;
-                $this->age = $age;
+              parent::__construct($name, $surname, $age, $creditCard, $email);
               $this->password = $password;
               
             }
